@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title>Initialization</title>
+
+</head>
+
+<body>
+    <audio autoplay loop src="assets/rainMusic.mp3" class="audio"></audio>
+    <div id="mute"></div>
+    <button id="reload">Retour au menu</button>
+    <div class="action"><a href="#">JOUER<span> ►</span></a></div>
+    <div class="play">
+        <div class="container">
+            <h1 id="popTitle">PUISSANCE4</h1>
+            <div id="colonnes">
+                <h3>Choisissez la taille de votre plateau :</h3>
+                <label for="lgn">Lignes :</label>
+                <input type="number" min="6" max="9" value="6" id="lgn" />
+                <label for="col">Colonnes :</label>
+                <input type="number" min="7" max="10" value="7" id="col" />
+            </div>
+            <div class="containerColors">
+                <h3>Choisissez la couleur du joueur 1 :</h3>
+                <label for="name2"></label>
+                <input type="text" id="name2" placeholder="Choisissez le nom du joueur 1"/>
+                <div class="display">
+                    <input type="radio" name="player1" id="color_1" />
+                    <label for="color_1" class="color_orange">Orange</label>
+                    <input type="radio" name="player1" id="color_2" />
+                    <label for="color_2" class="color_blue">Blue</label>
+                    <input type="radio" name="player1" id="color_3" />
+                    <label for="color_3" class="color_green">Green</label>
+                    <input type="radio" name="player1" id="color_4" />
+                    <label for="color_4" class="color_purple">Purple</label>
+                </div>
+            </div>
+            <div class="containerColors">
+                <h3>Choisissez la couleur du joueur 2 :</h3>
+                <label for="name1"></label>
+                <input type="text" id="name1" placeholder="Choisissez le nom du joueur 2"/>
+                <div class="display">
+                </div>
+            </div>
+            <button id="start">Start</button>
+        </div>
+    </div>
+    <div id="grid"></div>
+    <div id="tour">
+        <p id="bulleTour"></p>
+    </div>
+    
+    <div class="win">
+        <div class="content">
+            <button id="restart">Restart</button>
+        </div>
+    </div>
+    <script src="features.js"></script>
+</body>
+
+</html>
